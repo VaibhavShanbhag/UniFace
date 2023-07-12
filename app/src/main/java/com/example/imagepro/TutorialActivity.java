@@ -19,10 +19,10 @@ public class TutorialActivity extends AppCompatActivity implements TextToSpeech.
     private TextToSpeech textToSpeech;
     private Vibrator vibrator;
 
-    long[] happyVibrationPattern = {0, 100, 200, 300};
-    long[] sadVibrationPattern = {0, 300, 100, 300};
-    long[] angryVibrationPattern = {0, 200, 200, 200, 200};
+    long[] angryVibrationPattern = {0, 100, 100, 300, 100, 100, 300, 100, 100, 1000};
     long[] disgustVibrationPattern = {0, 500, 100, 500};
+    long[] happyVibrationPattern = {0, 200, 400, 600, 800, 1000, 800, 600, 400, 200};
+    long[] sadVibrationPattern = {0, 200, 100, 200, 1000};
     long[] surpriseVibrationPattern = {0, 400, 400};
 
     private String[] emotions = {

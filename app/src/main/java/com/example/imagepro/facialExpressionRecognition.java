@@ -37,13 +37,11 @@ public class facialExpressionRecognition {
     // Before this implement tensorflow to build.gradle file
     private Interpreter interpreter;
     // Vibration pattern for each emotion
-    long[] angryVibrationPattern = {0, 200, 200, 200, 200};
+    long[] angryVibrationPattern = {0, 100, 100, 300, 100, 100, 300, 100, 100, 1000};
     long[] disgustVibrationPattern = {0, 500, 100, 500};
-    long[] fearVibrationPattern = {0, 300, 300};
-    long[] happyVibrationPattern = {0, 100, 200, 300};
-    long[] sadVibrationPattern = {0, 300, 100, 300};
+    long[] happyVibrationPattern = {0, 200, 400, 600, 800, 1000, 800, 600, 400, 200};
+    long[] sadVibrationPattern = {0, 200, 100, 200, 1000};
     long[] surpriseVibrationPattern = {0, 400, 400};
-    long[] neutralVibrationPattern = {0, 150};
     // define input size
     private int INPUT_SIZE;
     // define height and width of original frame
