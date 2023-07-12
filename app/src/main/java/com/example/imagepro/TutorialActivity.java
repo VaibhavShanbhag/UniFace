@@ -68,6 +68,7 @@ public class TutorialActivity extends AppCompatActivity implements TextToSpeech.
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                 Log.e("TextToSpeech", "Language not supported");
             } else {
+                textToSpeech.setSpeechRate(0.5f);
                 speakTextWithEmotion();
             }
         } else {

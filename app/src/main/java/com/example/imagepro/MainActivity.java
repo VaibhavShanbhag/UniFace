@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                 Log.e("TextToSpeech", "Language not supported");
             } else {
                 // Text-to-speech engine is initialized successfully
+                textToSpeech.setSpeechRate(0.5f);
                 speakText("To start the app,click on the top half of the screen. For the tutorial,click on the bottom half of the screen");
             }
         } else {
