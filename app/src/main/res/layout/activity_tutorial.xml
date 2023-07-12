@@ -15,22 +15,28 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/facial_logo"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="UniFace"
             android:layout_gravity="center"
             android:textColor="#00a2fd"
-            android:textSize="24sp"/>
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"/>
 
         <TextView
+            android:id="@+id/textDesp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/name_symbol"
             android:layout_gravity="center"
             android:textSize="24sp"
-            android:textColor="#53d6ff"
-            android:layout_marginTop="8dp"/>
+            android:textColor="#00a2fd"
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 

@@ -8,6 +8,7 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
+import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,12 +19,15 @@ import java.util.Locale;
 public class TutorialActivity extends AppCompatActivity implements TextToSpeech.OnInitListener, TextToSpeech.OnUtteranceCompletedListener {
     private TextToSpeech textToSpeech;
     private Vibrator vibrator;
+    private TextView textView;
 
-    long[] angryVibrationPattern = {0, 100, 100, 300, 100, 100, 300, 100, 100, 1000};
-    long[] disgustVibrationPattern = {0, 500, 100, 500};
-    long[] happyVibrationPattern = {0, 200, 400, 600, 800, 1000, 800, 600, 400, 200};
-    long[] sadVibrationPattern = {0, 200, 100, 200, 1000};
-    long[] surpriseVibrationPattern = {0, 400, 400};
+    long[] angryVibrationPattern = {0, 100, 200, 300, 400};
+    long[] disgustVibrationPattern = {0, 500, 100, 600};
+    long[] happyVibrationPattern = {0, 200, 400, 600, 800};
+    long[] sadVibrationPattern = {0, 200, 300, 500, 1000};
+    long[] surpriseVibrationPattern = {0, 400, 800};
+
+    String speakerEmoji = "\uD83D\uDD0A";
 
     private String[] emotions = {
             "Welcome to uniface, This tutorial consists of the walkthrough of the uniface app. Uniface scans and detect facial expression of communications and notifies user with unique vibration and loads display for each emotion.",
@@ -55,6 +59,10 @@ public class TutorialActivity extends AppCompatActivity implements TextToSpeech.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
+
+        textView = findViewById(R.id.textDesp);
+        textView.setText("Listening to the Tutorial " + speakerEmoji);
+
 
         textToSpeech = new TextToSpeech(this, this);
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
